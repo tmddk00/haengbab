@@ -1,0 +1,180 @@
+@charset 'utf-8'; 
+/**********************폰트************************/
+@import url('https://webfontworld.github.io/score/SCoreDream.css'); 
+body { font-family: 'SCoreDream'; font-weight: 400; font-size: 16px; line-height: 1.5; color: #000; } 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/**********************초기화**********************/
+body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,fieldset { margin: 0; padding: 0; } 
+header,nav,section,article,aside,footer { display: block; }
+
+table{border-collapse: collapse;} 
+fieldset{border: 0;}
+legend,caption{position: absolute; left: -9999px;} 
+input{font-family: 'SCoreDream'; box-sizing: border-box; outline: none;}
+button{font-family: 'SCoreDream'; border: 0; padding: 0; cursor: pointer;}
+
+em,strong { font-style: normal; } 
+address{font-style: normal;}
+
+img { vertical-align: top; } 
+
+ul,ol { list-style: none; } 
+a { text-decoration: none; color: #000; } 
+
+/********************공통**********************/
+.blind{position: absolute; left: -9999px;}
+
+.container{max-width: 1530px; margin: 0 auto; padding-top: 127px;}
+
+.path_box{
+    height: 80px; padding-top: 28px; box-sizing: border-box;
+    font-weight: 500;
+    border-bottom: 1px solid #000;
+}
+.path_box ul{overflow: hidden;}
+.path_box ul li{float: left;}
+.path_box ul li a{display: block;}
+.path_box ul li + li::before{
+    content: ""; display: inline-block; vertical-align: top;
+    width: 24px; height: 24px;
+    background: url(../images/ico-arrow2.svg) no-repeat;
+}
+.path_box ul li span{display: inline-block;}
+
+/************************************************
+헤더영역
+************************************************/
+#header { 
+    position: fixed; width: 100%; height: 150px; 
+    background: rgba(255, 255, 255, 0.6); z-index: 9999; 
+    backdrop-filter: blur(10px);
+} 
+
+#header .gnb_bg{
+    position: absolute; left: 0; top: 150px; z-index: 1;
+    width: 100%; height: 0; opacity: 0; visibility: hidden;
+    transition: all 0.3s ease-out;
+    background: rgba(255, 255, 255, 0.6); z-index: 1;
+    backdrop-filter: blur(10px);
+}
+
+#header.on .gnb_bg{height: 500px; opacity: 1; visibility: visible;}
+
+/* #header::after{ content: ""; display: block; clear: both; } */
+
+#header h1 { position: absolute; left: 80px; top: 50%; transform: translateY(-50%); } 
+#header nav { 
+    position: absolute; left: 50%; top: 50%; z-index: 2;
+    transform: translate(-50% , -50%); width: 950px;
+} 
+
+#header nav #gnb {} 
+#header nav #gnb::after { content: ""; display: block; clear: both; } 
+#header nav #gnb > li { 
+    float: left; width: 190px; position: relative; 
+} 
+#header nav #gnb > li.on::after{
+    content: ""; position: absolute; left: 0; top: -47px; 
+    background: #FFC424; width: 100%; height: 630px
+}
+#header nav #gnb > li > a.depth1 { 
+    display: block; padding: 20px 0; font-size: 22px; 
+    font-weight: 500; text-align: center; position: relative; z-index: 1;
+} 
+
+#header nav #gnb > li > ul.depth2 { 
+    position: absolute; left: 0; top: 73px; 
+    width: 100%; height:510px; padding-top: 47px; padding-bottom: 60px; 
+    box-sizing: border-box;
+    display: none;
+}
+
+#header nav #gnb > li.on > ul.depth2{display: block;}
+#header nav #gnb > li.on > ul.depth2::after{
+    content: ""; width: 100px; height: 1px; background: #000;
+    position: absolute; left: 50%; top: 47px;
+    transform: translateX(-50%);
+}
+
+#header nav #gnb > li > ul.depth2 li { margin-top: 20px; } 
+#header nav #gnb > li > ul.depth2 li a { 
+    display: block; padding: 10px 0;
+    font-size: 18px; text-align: center; font-weight: 500;
+} 
+
+#header .util{position: absolute; right: 80px; top: 10px;}
+#header .util a{float: left; margin-left: 16px; font-size: 14px;}
+
+.franchise_info { 
+    position: absolute;
+    right: 0; top: 0;
+    width: 448px; height: 150px; border-radius: 0 0 0 24px;
+    padding: 35px 80px;
+    box-sizing: border-box; background: #2E0501; text-align: center;
+} 
+.franchise_info em { 
+    display: block; font-size: 22px;
+    text-align: left;
+    color: #FFC700;
+} 
+.franchise_info i{
+    float: left; margin: 6px 10px 0 0;
+    width: 35px; height: 35px;
+    background: url(../images/ico-tel.png) no-repeat center; 
+    background-size: 35px auto;
+}
+.franchise_info strong {
+    float: left;
+    padding-top: 4px;
+    font-size: 25px; font-weight: 700; color: #FFC700;
+    letter-spacing: -0.2px;
+} 
+
+
+
+/************************************************
+푸터영역
+************************************************/
+#footer{
+    margin-top: 200px;
+    background: #231F20; color: #fff;
+}
+#footer .footer_inner {
+    max-width: 1530px; margin: 0 auto;
+    padding: 80px 0 90px 0;
+} 
+
+#footer .footer_top{padding-bottom: 80px;}
+#footer .footer_top::after{content: ""; display: block; clear: both;}
+
+#footer .footer_top .col_lft{float: left;}
+#footer .footer_top .col_lft ul{margin-top: 40px;}
+#footer .footer_top .col_lft ul li{padding-left: 10px;}
+#footer .footer_top .col_lft ul li + li{margin-top: 10px;}
+#footer .footer_top .col_lft ul li a{color: #fff;}
+
+#footer .footer_top .col_cen{float: left; margin: 46px 0 0 500px;}
+#footer .footer_top .col_cen address{}
+#footer .footer_top .col_cen address ul{}
+#footer .footer_top .col_cen address ul li + li{margin-top: 20px;}
+#footer .footer_top .col_cen address ul li span + p{margin-top: 4px;}
+
+#footer .footer_top .col_rgt{float: right; margin-top: 46px;}
+#footer .footer_top .col_rgt a{
+    display: inline-block; width: 32px; height: 32px; margin-left: 20px;
+    background: url(../images/sns-icon.svg) no-repeat; text-indent: -9999px;
+}
+#footer .footer_top .col_rgt .i{background-position-x: -52px ;}
+#footer .footer_top .col_rgt .b{background-position-x: -104px ;}
+
+#footer .footer_btm{
+    border-top: 1px solid rgba(255,255,255,0.3); padding-top: 60px;
+}
+#footer .footer_btm .footer_link{}
+#footer .footer_btm .footer_link a{color: #fff;}
+#footer .footer_btm .footer_link a + a{margin-left: 20px;}
+
+#footer .footer_btm .footer_info{margin-top: 20px;}
+#footer .footer_btm .copy{margin-top: 20px;}

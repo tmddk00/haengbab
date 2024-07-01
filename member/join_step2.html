@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행복은간장밥</title>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="../resource/css/common.css">
+    <link rel="stylesheet" href="../resource/css/member.css">
+
+    <script src="../resource/js/script.js"></script>
+</head>
+<body>
+
+    <!-- 헤더 시작-->
+    <header id="header">
+        <h1>
+            <a href="#">
+                <img src="../resource/images/logo.png" alt="행복은간장밥">
+            </a>
+        </h1>
+
+        <nav>
+            <ul id="gnb">
+                <li><a href="#" class="depth1">브랜드</a>
+                    <ul class="depth2">
+                        <li><a href="../brand/brandstory.html">브랜드스토리</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" class="depth1">메뉴</a>
+                    <ul class="depth2">
+                        <li><a href="../menu/rice_list.html">세트 메뉴</a></li>
+                        <li><a href="../menu/rice_list.html">스페셜 메뉴</a></li>
+                        <li><a href="../menu/rice_list.html">밥류</a></li>
+                        <li><a href="../menu/rice_list.html">면류</a></li>
+                        <li><a href="../menu/rice_list.html">샐러드</a></li>
+                        <li><a href="../menu/rice_list.html">사이드</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" class="depth1">창업</a>
+                    <ul class="depth2">
+                        <li><a href="../franchise/faq.html">FAQ</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" class="depth1">고객센터</a>
+                    <ul class="depth2">
+                        <li><a href="../board/notice_list.html">공지사항</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="franchise_info">
+            <em>성공창업문의</em>
+            <i></i>
+            <strong>02-2275-0935</strong>
+        </div>
+        <div class="gnb_bg"></div>
+    </header>
+    <!-- 헤더 끝-->
+
+    <div class="container">
+        <div class="path_box">
+            <ul>
+                <li><a href="../index.html"><img src="../resource/images/ico-home.svg" alt="홈"></a></li>
+                <li><span>회원가입</span></li>
+            </ul>
+        </div>
+
+        <div id="join_wrap">
+            <div class="tit_box">
+                <h2>회원가입</h2>    
+                <p>회원으로 가입하시면 제공하는 다양한 서비스를 이용할 수 있습니다.</p>
+            </div>
+
+            <div class="step_box">
+                <ol>
+                    <li>약관동의</li>
+                    <li class="current">정보입력</li>
+                    <li>가입완료</li>
+                </ol>
+            </div>
+            
+            <form action="http://www.naver.com" name="" id="joinForm" onsubmit="">
+                <fieldset>
+                    <legend>필수정보입력 폼</legend>
+
+                    <div class="form_box">
+                        <h3>필수정보입력</h3>
+
+                        <div class="inp_row row">
+                            <label for="userEmail">이메일</label>
+
+                            <p class="inp_txt">
+                                <input type="email" name="" id="userEmail" placeholder="이메일 입력(abc@abc.com)">
+                                
+                                <button type="button" class="btn_dbchk">중복확인</button>
+                            </p>
+
+                            <p class="err_msg email_msg">에러메시지</p>
+                        </div>
+
+                        <div class="inp_row row">
+                            <label for="userPw">비밀번호</label>
+
+                            <p class="inp_txt">
+                                <input type="password" name="" id="userPw" placeholder="비밀번호 입력(영문·숫자·특수문자 조합 8자 이상)">
+                            </p>
+                        </div>
+
+                        <div class="inp_row row">
+                            <label for="userPwRe">비밀번호 재입력</label>
+
+                            <p class="inp_txt">
+                                <input type="password" name="" id="userPwRe" placeholder="비밀번호 입력확인">
+                            </p>
+
+                            <p class="err_msg pw_msg">에러메시지</p>
+                        </div>
+
+                        <div class="inp_row row">
+                            <label for="userPhone">휴대폰번호</label>
+
+                            <p class="inp_txt">
+                                <input type="tel" name="" id="userPhone" placeholder="휴대폰번호 입력(하이픈’-’없이 입력)">
+                            </p>
+
+                            <p class="err_msg phone_msg">에러메시지</p>
+                        </div>
+
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>부가정보입력 폼</legend>
+
+                    <div class="form_box">
+                        <h3>부가정보입력</h3>
+                        <p>행복은 간장밥 소식, 이벤트 당첨 등의 소식을 받아볼 수 있습니다.</p>
+
+                        <div class="radio_row">
+                            <span>이메일수신여부</span>
+
+                            <p>
+                                <input type="radio" name="mailing" id="no" class="mailing" checked>
+                                <label for="no">수신안함</label>
+
+                                <input type="radio" name="mailing" id="yes" class="mailing">
+                                <label for="yes">수신함</label>
+                            </p>  
+                        </div>
+
+                        <div class="btn_row row">
+                            <button type="reset" class="btn_outline btn_cancel">취소</button>
+
+                            <button 
+                                type="button" class="btn_filled btn_next"
+                                onclick="location.href = 'join_step3.html'"
+                                >
+                                다음단계
+                            </button>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    
+    <!-- 푸터 시작-->
+    <footer id="footer">
+        <div class="footer_inner">
+            <div class="footer_top">
+                <div class="col_lft">
+                    <p><img src="../resource/images/footer-logo.png" alt="행복은간장밥"></p>
+
+                    <ul>
+                        <li><a href="../brand/brandstory.html">브랜드</a></li>
+                        <li><a href="../menu/set_list.html">메뉴</a></li>
+                        <li><a href="../franchise/faq.html">창업</a></li>
+                        <li><a href="../board/notice_list.html">고객센터</a></li>
+                    </ul>
+                </div>
+
+                <div class="col_cen">
+                    <address>
+                        <ul>
+                            <li>
+                                <span>주소</span>
+                                <p>서울시 중구 퇴계로 197, 충무빌딩 503호</p>
+                            </li>
+
+                            <li>
+                                <span>이메일</span>
+                                <p>haengbab@naver.com</p>
+                            </li>
+
+                            <li>
+                                <span>문의전화</span>
+                                <p>02-2275-0935</p>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+
+                <div class="col_rgt">
+                    <a href="#" class="f">페이스북</a>
+                    <a href="#" class="i">인스타그램</a>
+                    <a href="#" class="b">블로그</a>
+                </div>
+            </div>
+            
+            <div class="footer_btm">
+                <div class="footer_link">
+                    <a href="#">이용약관</a>
+                    <a href="#">개인정보처리방침</a>
+                </div>
+                <div class="footer_info">
+                    가맹본사 : 비나리컴퍼니  대표 : 홍찬 <br>
+                    사업자등록번호 : 664-04-02238
+                </div>
+                <p class="copy">
+                    &copy; 2024 행복은간장밥. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- 푸터 끝-->
+</body>
+</html>
